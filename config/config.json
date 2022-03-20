@@ -1,26 +1,26 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "sequelizerecipe_box_app",
+    "password": "HfKfK79k",
+    "database": "recipe_box_development",
+    "host": "192.168.0.16",
+    "dialect": "postgres",
+    "seederStorage": "squelize"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "sequelizerecipe_box_app",
+    "password": "HfKfK79k",
+    "database": "recipe_box_test",
+    "host": "192.168.0.16",
+    "dialect": "postgres",
+    "seederStorage": "squelize"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "sequelizerecipe_box_app",
+    "password": "HfKfK79k",
+    "database": "recipe_box_production",
+    "host": "192.168.0.16",
+    "dialect": "postgres",
+    "seederStorage": "squelize"
   }
 }
