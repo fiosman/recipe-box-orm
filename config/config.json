@@ -5,7 +5,7 @@
     "database": "recipe_box_development",
     "host": "192.168.0.16",
     "dialect": "postgres",
-    "seederStorage": "squelize"
+    "seederStorage": "sequelize"
   },
   "test": {
     "username": "sequelizerecipe_box_app",
@@ -13,7 +13,7 @@
     "database": "recipe_box_test",
     "host": "192.168.0.16",
     "dialect": "postgres",
-    "seederStorage": "squelize"
+    "seederStorage": "sequelize"
   },
   "production": {
     "username": "sequelizerecipe_box_app",
@@ -21,6 +21,6 @@
     "database": "recipe_box_production",
     "host": "192.168.0.16",
     "dialect": "postgres",
-    "seederStorage": "squelize"
+    "seederStorage": "sequelize"
   }
 }
