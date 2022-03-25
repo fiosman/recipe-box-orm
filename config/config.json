@@ -3,7 +3,7 @@
     "username": "sequelizerecipe_box_app",
     "password": "HfKfK79k",
     "database": "recipe_box_development",
-    "host": "192.168.0.16",
+    "host": "192.168.0.18",
     "dialect": "postgres",
     "seederStorage": "sequelize"
   },
@@ -11,7 +11,7 @@
     "username": "sequelizerecipe_box_app",
     "password": "HfKfK79k",
     "database": "recipe_box_test",
-    "host": "192.168.0.16",
+    "host": "192.168.0.18",
     "dialect": "postgres",
     "seederStorage": "sequelize"
   },
@@ -19,7 +19,7 @@
     "username": "sequelizerecipe_box_app",
     "password": "HfKfK79k",
     "database": "recipe_box_production",
-    "host": "192.168.0.16",
+    "host": "192.168.0.18",
     "dialect": "postgres",
     "seederStorage": "sequelize"
   }
