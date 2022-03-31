@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  MeasurementUnit.associate = function (models) {};
+  MeasurementUnit.associate = function (models) {
+    MeasurementUnit.hasMany(models.Ingredient, { foreignKey: "measurementunitId" });
+  };
   return MeasurementUnit;
 };

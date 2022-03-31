@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   Recipe.associate = function (models) {
     Recipe.hasMany(models.Instruction, { foreignKey: "recipeId" });
+    Recipe.hasMany(models.Ingredient, { foreignKey: "recipeId" });
   };
   return Recipe;
 };
