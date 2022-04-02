@@ -4,7 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     "Ingredient",
     {
       amount: DataTypes.DECIMAL,
-      foodStuff: DataTypes.STRING,
+      foodStuff: {
+        type: DataTypes.STRING,
+        validate: {
+          notEmpty: true,
+        },
+      },
       recipeId: DataTypes.INTEGER,
       measurementunitId: DataTypes.INTEGER,
     },

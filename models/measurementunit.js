@@ -3,7 +3,12 @@ module.exports = (sequelize, DataTypes) => {
   const MeasurementUnit = sequelize.define(
     "MeasurementUnit",
     {
-      name: DataTypes.STRING,
+      name: {
+        type: DataTypes.STRING,
+        validate: {
+          notEmpty: true,
+        },
+      },
     },
     {}
   );
