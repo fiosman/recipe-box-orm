@@ -19,8 +19,9 @@ try {
 /* Don't change code above this line ******************************************/
 
 async function createNewIngredient(amount, recipeId, measurementUnitId, foodStuff) {
-  const newIngredient = await Ingredient.create({ amount, recipeId, measurementUnitId, foodStuff });
-  await newIngredient.save();
+  const newIngredient = Ingredient.create({ amount, recipeId, measurementUnitId, foodStuff });
+
+  return newIngredient;
 }
 
 /* Don't change code below this line ******************************************/
