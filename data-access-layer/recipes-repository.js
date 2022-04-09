@@ -1,24 +1,22 @@
-const { Op } = require('sequelize');
+const { Op } = require("sequelize");
 let Recipe, Instruction, Ingredient, MeasurementUnit;
 let moduleError;
 
 try {
-  const db = require('../models');
+  const db = require("../models");
   ({ Recipe, Instruction, Ingredient, MeasurementUnit } = db);
   if (Recipe === undefined) {
-    moduleError = 'It looks like you need to generate the Recipe model.';
+    moduleError = "It looks like you need to generate the Recipe model.";
   }
 } catch (e) {
   console.error(e);
-  if (e.message.includes('Cannot find module')) {
-    moduleError = 'It looks like you need initialize your project.';
+  if (e.message.includes("Cannot find module")) {
+    moduleError = "It looks like you need initialize your project.";
   } else {
     moduleError = `An error was raised "${e.message}". Check the console for details.`;
   }
 }
 /* Don't change code above this line ******************************************/
-
-
 
 async function getTenNewestRecipes() {
   // Use the findAll method of the Recipe object to return the recipes.
@@ -34,6 +32,7 @@ async function getTenNewestRecipes() {
   // });
   //
   // Docs: https://sequelize.org/master/class/lib/model.js~Model.html#static-method-findAll
+  return Recipe.findAll({ limit: 10 });
 }
 
 async function getRecipeById(id) {
@@ -94,9 +93,6 @@ async function searchRecipes(term) {
   //
   // Docs: https://sequelize.org/v5/manual/querying.html
 }
-
-
-
 
 /* Don't change code below this line ******************************************/
 module.exports = {
