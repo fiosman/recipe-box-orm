@@ -54,22 +54,8 @@ async function getRecipeById(id) {
   //   ]
   // });
   //
-  // Look at the data model in the instructions to see the relations between the
-  // Recipe table and the Ingredients and Instructions table. Figure out which
-  // of them goes into that form above as "firstDataModel" and
-  // "secondDataModel". Then, determine which goes into "thirdDataModel".
-  //
-  // There aren't that many combinations. If it's not apparent, try them out
-  // until something works. It turns out that's a very practical way that
-  // software developers will do stuff: try stuff out until it works; when it
-  // does work, figure out why it works.
-  //
-  // Don't forget that last step if you're trying to find out how it works. When
-  // you do stumble on the correct answer, try to figure out how it works.
-  //
-  // Here are links to the wholly-inadequate docs for this.
-  // Docs: https://sequelize.org/v5/manual/models-usage.html#eager-loading
-  //       https://sequelize.org/v5/manual/models-usage.html#nested-eager-loading
+
+  Recipe.findByPk(id, {});
 }
 
 async function deleteRecipe(id) {
