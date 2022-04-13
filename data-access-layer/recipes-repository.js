@@ -55,7 +55,7 @@ async function getRecipeById(id) {
   // });
   //
 
-  Recipe.findByPk(id, {
+  return Recipe.findByPk(id, {
     include: [{ model: Ingredient, include: [{ model: MeasurementUnit }] }, { model: Instruction }],
   });
 }
