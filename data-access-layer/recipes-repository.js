@@ -61,6 +61,7 @@ async function getRecipeById(id) {
 }
 
 async function deleteRecipe(id) {
+  return Recipe.destroy({ where: { id } });
   // Use the findByPk method of the Recipe object to get the object and, then,
   // destroy it. Or, use the Model.destroy({ ... where ... }) method that you
   // saw in the video.
