@@ -1,4 +1,4 @@
-const { Op } = require("sequelize");
+const { Op, Model } = require("sequelize");
 let Recipe, Instruction, Ingredient, MeasurementUnit;
 let moduleError;
 
@@ -70,6 +70,9 @@ async function deleteRecipe(id) {
 }
 
 async function createNewRecipe(title) {
+  const newRecipe = await Recipe.create({ title });
+
+  return newRecipe;
   // Use the create method of the Recipe object to create a new object and
   // return it.
   //
