@@ -19,7 +19,7 @@ try {
 /* Don't change code above this line ******************************************/
 
 async function createNewIngredient(amount, recipeId, measurementUnitId, foodStuff) {
-  const newIngredient = Ingredient.create({ amount, recipeId, measurementUnitId, foodStuff });
+  const newIngredient = await Ingredient.create({ amount, recipeId, measurementUnitId, foodStuff });
 
   return newIngredient;
 }
