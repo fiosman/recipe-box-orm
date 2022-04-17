@@ -84,6 +84,11 @@ async function searchRecipes(term) {
   // given term in its title
   //
   // Docs: https://sequelize.org/v5/manual/querying.html
+  const matchedRecipe = await Recipe.findAll({
+    where: { title: { [Op.like]: "%" + term + "%" } },
+  });
+
+  return matchedRecipe;
 }
 
 /* Don't change code below this line ******************************************/
