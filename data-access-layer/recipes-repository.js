@@ -32,7 +32,8 @@ async function getTenNewestRecipes() {
   // });
   //
   // Docs: https://sequelize.org/master/class/lib/model.js~Model.html#static-method-findAll
-  return Recipe.findAll({ limit: 10, order: [["createdAt", "DESC"]] });
+  const recipes = await Recipe.findAll({ limit: 10, order: [["createdAt", "DESC"]] });
+  return recipes;
 }
 
 async function getRecipeById(id) {
@@ -55,13 +56,16 @@ async function getRecipeById(id) {
   // });
   //
 
-  return Recipe.findByPk(id, {
+  const recipe = await Recipe.findByPk(id, {
     include: [{ model: Ingredient, include: [{ model: MeasurementUnit }] }, { model: Instruction }],
   });
+
+  return recipe;
 }
 
 async function deleteRecipe(id) {
-  return Recipe.destroy({ where: { id } });
+  const deletedRecipe = await Recipe.destroy({ where: { id } });
+  return deletedRecipe;
   // Use the findByPk method of the Recipe object to get the object and, then,
   // destroy it. Or, use the Model.destroy({ ... where ... }) method that you
   // saw in the video.
